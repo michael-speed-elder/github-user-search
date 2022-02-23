@@ -12,7 +12,7 @@ A clone of the GitHub user search behavior
 
 ## Futures
 
-- ✖ Light/Dark mode (by media query and toggle)
-- ✖ Route params (sendable URLs)
-- ✖ Github search syntax guide
-- ✖ Click to clear results
+- ❌ Light/Dark mode (by media query and toggle)
+- ❌ Route params (sendable URLs)
+- ❌ Github search syntax guide
+- ❌ Click to clear results
