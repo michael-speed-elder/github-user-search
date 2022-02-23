@@ -1,30 +1,44 @@
 <script lang="ts">
-	export let name: string;
+  import Search from "./components/Search.svelte";
+  import rate_limit_alert from "stores/rate_limit_alert";
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <header class:alert={$rate_limit_alert}>{$rate_limit_alert}</header>
+  <div class="content">
+    <Search />
+  </div>
 </main>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<style lang="scss">
+  @import "./styles/variables";
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  main {
+    border-bottom: 3em solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+    header {
+      padding: 1.5em;
+      background-color: $github-dark;
+
+      &.alert {
+        transition: background-color 333ms;
+        background-color: #d44;
+        color: white;
+        line-height: 1.5;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: calc(800px + 4em);
+      width: 100%;
+      overflow: hidden;
+      padding: 0 2em;
+    }
+  }
 </style>

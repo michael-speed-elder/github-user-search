@@ -6,7 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
 import css from "rollup-plugin-css-only";
-import autoprefixer from "autoprefixer";
+// import autoprefixer from "autoprefixer";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -47,9 +47,9 @@ export default {
     svelte({
       preprocess: sveltePreprocess({
         sourceMap: !production,
-        postcss: [autoprefixer()],
+        // postcss: [autoprefixer()],
         scss: {
-          prependData: "@import src/styles/variables.scss",
+          prependData: "@import 'src/styles/variables.scss';",
         },
       }),
       compilerOptions: {
