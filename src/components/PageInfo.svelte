@@ -18,7 +18,6 @@
   </div>
   <label>
     Results per page:
-    <!-- <input type="number" min="1" max="100" step="10" value={$per_page} /> -->
     <select bind:value={$per_page}>
       <option value={10}>10</option>
       <option value={20}>20</option>
@@ -32,6 +31,7 @@
 <style lang="scss">
   .page-info {
     font-size: 0.8em;
+    line-height: 1.1;
     display: flex;
     align-items: center;
     justify-content: space-between;

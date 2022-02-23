@@ -1,9 +1,6 @@
 <script lang="ts">
   import { page_num, search_results, search_string } from "stores/.";
-  import LoadingSpinner from "./LoadingSpinner.svelte";
   import PageInfo from "./PageInfo.svelte";
-  // import { tick } from "svelte";
-  // import { handleSearch } from "../utils/handleSearch";
   import Pagination from "./Pagination.svelte";
   import Results from "./Results.svelte";
 

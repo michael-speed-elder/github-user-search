@@ -41,9 +41,9 @@
     gap: 0.67em;
     padding: 1em;
     width: calc(100% - 1em);
+    word-break: break-word;
 
     :global(& + &) {
-      // & + & {
       margin-top: 1em;
     }
 
@@ -54,6 +54,7 @@
 
     .name {
       font-size: 1em;
+      line-height: 1.1;
     }
   }
 
